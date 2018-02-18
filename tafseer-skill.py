@@ -1,7 +1,8 @@
 import logging
-import requests
 from flask import Flask, render_template
 from flask_ask import Ask, statement, question
+
+from services import QuranTafseerService
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -17,10 +18,10 @@ def welcome():
 @ask.intent("AyahTafseerIntent", convert={'verse_number': int,
                                           'chapter_number': int})
 def ayah_tafseer(chapter_number, verse_number):
-    url = 'http://api.quran-tafseer.com/tafseer/9/{}/{}'.format(chapter_number,
-                                                                verse_number)
-    tafseer_response = requests.get(url)
-    tafseer_text = tafseer_response.json()['text']
+    tafseer_text = QuranTafseerService.ayah_tafseer(
+        chapter_number=chapter_number,
+        ayah_number=verse_number,
+        tafseer_number=9)
     msg = render_template('ayah_tafseer', verse_number=verse_number,
                           chapter_number=chapter_number,
                           tafseer_text=tafseer_text)
