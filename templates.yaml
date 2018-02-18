@@ -1,0 +1,2 @@
+welcome: Welcome to Quran Tafseer, Please give me the chapter and cerse number to get the tafseer for you.
+ayah_tafseer: Here is tafseer for verse number {{verse_number}} in chapter number {{chapter_number}}, {{tafseer_text}}
