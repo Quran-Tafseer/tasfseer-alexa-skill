@@ -15,4 +15,4 @@ class QuranTafseerService:
         tafseer_response = requests.get(url)
         if tafseer_response.status_code != 200:
             return 'Something went wrong'
-        return tafseer_response.json()['text']
+        return tafseer_response
