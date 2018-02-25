@@ -1,3 +1,3 @@
 welcome: Welcome to Quran Tafseer.
-ayah_tafseer: Tafseer for verse number {{verse_number}} in chapter number {{chapter_number}}, {{tafseer_text}}.
-ayah_tafseer_next: Tafseer for verse number {{verse_number}} in chapter number {{chapter_number}}, {{tafseer_text}}. Do you want me to read the next one?
+ayah_tafseer: Tafseer for chapter number {{chapter_number}}, verse number {{verse_number}}, {{tafseer_text}}.
+ayah_tafseer_next: Tafseer for chapter number {{chapter_number}}, verse number {{verse_number}}, {{tafseer_text}}. Do you want me to read the next one?
