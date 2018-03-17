@@ -65,8 +65,13 @@ def next_ayah_tafseer():
 
 
 @ask.intent("AMAZON.StopIntent")
-def stop_ayah_intent():
-    return statement("Thanks for using Quran Tafseer.")
+def stop_intent():
+    return statement(render_template('thanks'))
+
+
+@ask.intent("AMAZON.CancelIntent")
+def cancel_intent():
+    return statement(render_template('thanks'))
 
 
 if __name__ == '__main__':
