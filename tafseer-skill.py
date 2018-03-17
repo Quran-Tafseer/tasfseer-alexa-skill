@@ -18,6 +18,11 @@ def welcome():
 @ask.intent("AyahTafseerIntent", convert={'verse_number': int,
                                           'chapter_number': int})
 def ayah_tafseer(chapter_number, verse_number):
+    if verse_number is None:
+        return statement(render_template('missing_verse_slot'))
+    if chapter_number is None:
+        return statement(render_template('missing_chapter_slot'))
+
     tafseer_response = QuranTafseerService.ayah_tafseer(
         chapter_number=chapter_number,
         ayah_number=verse_number,
