@@ -18,6 +18,11 @@ def welcome():
 @ask.intent("AyahTafseerIntent", convert={'verse_number': int,
                                           'chapter_number': int})
 def ayah_tafseer(chapter_number, verse_number):
+    if verse_number is None:
+        return question(render_template('missing_verse_slot'))
+    if chapter_number is None:
+        return question(render_template('missing_chapter_slot'))
+
     tafseer_response = QuranTafseerService.ayah_tafseer(
         chapter_number=chapter_number,
         ayah_number=verse_number,
@@ -60,9 +65,19 @@ def next_ayah_tafseer():
 
 
 @ask.intent("AMAZON.StopIntent")
-def stop_ayah_intent():
-    return statement("Thanks for using Quran Tafseer.")
+def stop_intent():
+    return statement(render_template('thanks'))
+
+
+@ask.intent("AMAZON.CancelIntent")
+def cancel_intent():
+    return statement(render_template('thanks'))
+
+
+@ask.intent("AMAZON.HelpIntent")
+def help_intent():
+    return question(render_template('help'))
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
