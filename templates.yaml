@@ -1,6 +1,7 @@
-welcome: Welcome to Quran Tafseer, I can give you Quran tafseer by giving me the chapter number and the verse number.
+welcome: Welcome to Quran Tafseer, I can read Quran tafseer for you by giving me the chapter number and the verse number.
 ayah_tafseer: Tafseer for chapter number {{chapter_number}}, verse number {{verse_number}}, {{tafseer_text}}.
-ayah_tafseer_next: Tafseer for chapter number {{chapter_number}}, verse number {{verse_number}}, {{tafseer_text}}. Do you want me to read the next one?
-missing_chapter_slot: Sorry, I didn't get the chapter number.
-missing_verse_slot: Sorry, I didn't get the verse number.
-thanks: Thanks for using Quran Tafseer, Salam.
+ayah_tafseer_next: Tafseer for chapter number {{chapter_number}}, verse number {{verse_number}}, {{tafseer_text}} Do you want me to read the next one?
+missing_chapter_slot: Sorry, I didn't get the chapter number, Can you say the chapter number and verse number again?
+missing_verse_slot: Sorry, I didn't get the verse number, Can you say the chapter number and verse number again?
+thanks: Thanks for using Quran Tafseer.
+help: You can ask Quran Tafseer which chapter and verse you want the tafseer for, for example ask quran tafseer chapter 1 verse 1, or you can say Exit to stop using the skill.
