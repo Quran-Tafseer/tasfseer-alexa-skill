@@ -1,4 +1,4 @@
-welcome: Welcome to Quran Tafseer.
+welcome: Welcome to Quran Tafseer, I can give you Quran tafseer by giving me the chapter number and the verse number.
 ayah_tafseer: Tafseer for chapter number {{chapter_number}}, verse number {{verse_number}}, {{tafseer_text}}.
 ayah_tafseer_next: Tafseer for chapter number {{chapter_number}}, verse number {{verse_number}}, {{tafseer_text}}. Do you want me to read the next one?
 missing_chapter_slot: Sorry, I didn't get the chapter number.
